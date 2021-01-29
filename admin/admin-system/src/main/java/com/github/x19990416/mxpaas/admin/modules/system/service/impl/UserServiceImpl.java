@@ -38,72 +38,64 @@ import java.util.Map;
 import java.util.Set;
 
 @Service
-@RequiredArgsConstructor
 @CacheConfig(cacheNames = "user")
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-	UserRepository userRepository;
-	private final UserMapper userMapper;
-	private final FileProperties properties;
-	private final RedisUtil redisUtils;
-	private final UserCacheClean userCacheClean;
-	private final OnlineUserService onlineUserService;
-	@Override
-	public UserDto findById(long id) {
-		return null;
-	}
+  private UserRepository userRepository;
 
-	@Override
-	public void create(User resources) {
+  private UserMapper userMapper;
 
-	}
+  private FileProperties properties;
 
-	@Override
-	public void update(User resources) throws Exception {
+  private RedisUtil redisUtils;
 
-	}
+  private UserCacheClean userCacheClean;
 
-	@Override
-	public void delete(Set<Long> ids) {
+  private OnlineUserService onlineUserService;
 
-	}
+  @Override
+  public UserDto findById(long id) {
+    return null;
+  }
 
-	@Override
-	public UserDto findByName(String userName) {
-		return null;
-	}
+  @Override
+  public void create(User resources) {}
 
-	@Override
-	public void updatePass(String username, String encryptPassword) {
+  @Override
+  public void update(User resources) throws Exception {}
 
-	}
+  @Override
+  public void delete(Set<Long> ids) {}
 
-	@Override
-	public Map<String, String> updateAvatar(MultipartFile file) {
-		return null;
-	}
+  @Override
+  public UserDto findByName(String userName) {
+    return null;
+  }
 
-	@Override
-	public void updateEmail(String username, String email) {
+  @Override
+  public void updatePass(String username, String encryptPassword) {}
 
-	}
+  @Override
+  public Map<String, String> updateAvatar(MultipartFile file) {
+    return null;
+  }
 
-	@Override
-	public Object queryAll(UserQueryCriteria criteria, Pageable pageable) {
-		return null;
-	}
+  @Override
+  public void updateEmail(String username, String email) {}
 
-	@Override
-	public List<UserDto> queryAll(UserQueryCriteria criteria) {
-		return null;
-	}
+  @Override
+  public Object queryAll(UserQueryCriteria criteria, Pageable pageable) {
+    return null;
+  }
 
-	@Override
-	public void download(List<UserDto> queryAll, HttpServletResponse response) throws IOException {
+  @Override
+  public List<UserDto> queryAll(UserQueryCriteria criteria) {
+    return null;
+  }
 
-	}
+  @Override
+  public void download(List<UserDto> queryAll, HttpServletResponse response) throws IOException {}
 
-	@Override
-	public void updateCenter(User resources) {
-
-	}
+  @Override
+  public void updateCenter(User resources) {}
 }

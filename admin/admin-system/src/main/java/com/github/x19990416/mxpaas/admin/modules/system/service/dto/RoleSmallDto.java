@@ -15,5 +15,17 @@
  */
 package com.github.x19990416.mxpaas.admin.modules.system.service.dto;
 
-public class RoleSmallDto {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class RoleSmallDto implements Serializable {
+    private Long id;
+
+    private String name;
+
+    private Integer level;
+
+    private String dataScope;
 }

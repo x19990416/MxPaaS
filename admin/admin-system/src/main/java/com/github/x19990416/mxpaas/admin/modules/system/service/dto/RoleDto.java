@@ -17,12 +17,14 @@ package com.github.x19990416.mxpaas.admin.modules.system.service.dto;
 
 import com.github.x19990416.mxpaas.admin.common.base.BaseDTO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class RoleDto extends BaseDTO implements Serializable {
 
 	private Long id;

@@ -28,7 +28,6 @@ dependencies {
     implementation group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
     implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
     implementation group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
-    implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.1.Final'
     // Use JUnit test frameworkjjwt-
     testImplementation 'junit:junit:4.12'
 }

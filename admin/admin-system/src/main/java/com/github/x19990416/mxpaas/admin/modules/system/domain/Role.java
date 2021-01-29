@@ -20,6 +20,7 @@ import com.github.x19990416.mxpaas.admin.common.base.BaseEntity;
 import com.github.x19990416.mxpaas.admin.common.utils.enums.DataScopeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -31,6 +32,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "sys_role")
+@EqualsAndHashCode(callSuper = false)
 public class Role extends BaseEntity implements Serializable {
 
 	@Id

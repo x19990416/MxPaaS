@@ -20,6 +20,7 @@ import com.github.x19990416.mxpaas.admin.modules.system.domain.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+
 @Mapper(
     componentModel = "spring",
     uses = {RoleMapper.class, DeptMapper.class, JobMapper.class},

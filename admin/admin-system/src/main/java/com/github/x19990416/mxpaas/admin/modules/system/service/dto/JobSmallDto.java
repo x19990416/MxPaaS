@@ -15,5 +15,13 @@
  */
 package com.github.x19990416.mxpaas.admin.modules.system.service.dto;
 
-public class JobSmallDto {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class JobSmallDto implements Serializable {
+    private Long id;
+
+    private String name;
 }

@@ -16,17 +16,11 @@
 package com.github.x19990416.mxpaas.admin.modules.system.service.dto;
 
 import com.github.x19990416.mxpaas.admin.common.base.BaseDTO;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
+@Data
 public class JobDto extends BaseDTO implements Serializable {
 
   private Long id;
