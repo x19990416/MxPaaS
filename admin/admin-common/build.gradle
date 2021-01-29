@@ -12,12 +12,24 @@ plugins {
 }
 
 dependencies {
-
     api 'com.google.guava:guava:30.1-jre'
-    api group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springbootVersion
+    api group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springbootStarterVersion
+    api group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
     api group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
-    implementation group: 'org.springframework.data', name: 'spring-data-redis', version: springdataRedis
-
+    api group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    api group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springbootStarterVersion
+    api group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.1.6'
+    api group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+    api group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    api group: 'com.alibaba.druid', name: 'druid-wrapper', version: '0.2.9'
+    api group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.2'
+    api group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    implementation group: 'eu.bitwalker', name: 'UserAgentUtils', version: '1.21'
+    implementation group: 'org.apache.directory.studio', name: 'org.apache.commons.codec', version: '1.8'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: springbootStarterVersion
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: springbootStarterVersion
+    implementation group: 'org.lionsoul', name: 'ip2region', version: '1.7.2'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.8.0'
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }

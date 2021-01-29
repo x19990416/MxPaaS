@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 /**
- * 限流用
+ * 限流用：
  */
 public @interface Limit {
 

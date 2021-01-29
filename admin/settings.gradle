@@ -9,4 +9,4 @@
 
 rootProject.name = 'admin'
 
-include ':admin-common'
+include ':admin-common',':admin-system'

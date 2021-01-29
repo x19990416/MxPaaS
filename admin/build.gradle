@@ -4,17 +4,14 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
-plugins{
-    id 'java'
-}
 
 allprojects {
+    apply plugin: 'java'
 
     ext {
-        springbootVersion = '2.4.2'
+        springbootStarterVersion = '2.4.2'
         springdataRedis = '2.4.3'
     }
-
     repositories {
         // Use jcenter for resolving your dependencies.
         // You can declare any Maven/Ivy/file repository here.
@@ -24,7 +21,8 @@ allprojects {
     }
 
     dependencies {
-       // implementation 'org.projectlombok:lombok:1.18.8'
-     //   annotationProcessor 'org.projectlombok:lombok:1.18.8'
+        implementation 'org.projectlombok:lombok:1.18.8'
+        implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.1.6'
+        annotationProcessor 'org.projectlombok:lombok:1.18.8'
     }
 }
