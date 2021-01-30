@@ -84,9 +84,9 @@ public interface RoleService {
 
 	/**
 	 * 解绑菜单
-	 * @param id /
+	 * @param menuId /
 	 */
-	void untiedMenu(Long id);
+	void untiedMenu(Long menuId);
 
 	/**
 	 * 待条件分页查询

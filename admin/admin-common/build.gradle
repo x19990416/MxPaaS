@@ -24,6 +24,7 @@ dependencies {
     api group: 'com.alibaba.druid', name: 'druid-wrapper', version: '0.2.9'
     api group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.2'
     api group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    api group: 'commons-validator', name: 'commons-validator', version: '1.7'
     implementation group: 'eu.bitwalker', name: 'UserAgentUtils', version: '1.21'
     implementation group: 'org.apache.directory.studio', name: 'org.apache.commons.codec', version: '1.8'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: springbootStarterVersion

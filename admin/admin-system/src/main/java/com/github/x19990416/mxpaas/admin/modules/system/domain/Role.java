@@ -21,6 +21,7 @@ import com.github.x19990416.mxpaas.admin.common.utils.enums.DataScopeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -33,6 +34,7 @@ import java.util.Set;
 @Entity
 @Table(name = "sys_role")
 @EqualsAndHashCode(callSuper = false)
+@DynamicUpdate()
 public class Role extends BaseEntity implements Serializable {
 
 	@Id
