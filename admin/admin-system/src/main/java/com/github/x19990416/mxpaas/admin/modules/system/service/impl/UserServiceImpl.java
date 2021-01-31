@@ -46,17 +46,17 @@ import java.util.stream.Collectors;
 @CacheConfig(cacheNames = "user")
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-  private UserRepository userRepository;
+  private final UserRepository userRepository;
 
-  private UserMapper userMapper;
+  private final UserMapper userMapper;
 
-  private FileProperties properties;
+  private final FileProperties properties;
 
-  private RedisUtil redisUtils;
+  private final RedisUtil redisUtils;
 
-  private UserCacheClean userCacheClean;
+  private final UserCacheClean userCacheClean;
 
-  private OnlineUserService onlineUserService;
+  private final OnlineUserService onlineUserService;
 
   @Override
   public UserDto findById(long id) {

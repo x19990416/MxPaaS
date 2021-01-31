@@ -16,10 +16,10 @@
 package com.github.x19990416.mxpaas.admin.common.config;
 
 import com.fasterxml.classmate.TypeResolver;
+
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,15 +28,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.data.domain.Pageable;
 import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestParameterBuilder;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 import springfox.documentation.schema.AlternateTypeRule;
 import springfox.documentation.schema.AlternateTypeRuleConvention;
-import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Parameter;
 import springfox.documentation.service.RequestParameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -62,20 +59,16 @@ public class SwaggerConfig {
   @Bean
   @SuppressWarnings("all")
   public Docket createRestApi() {
-  	RequestParameterBuilder ticketPar = new RequestParameterBuilder();
+    RequestParameterBuilder ticketPar = new RequestParameterBuilder();
     List<RequestParameter> pars = new ArrayList<>();
-    ticketPar
-        .name(tokenHeader)
-        .description("token")
-        .in("header")
-        .required(true)
-        .build();
+    ticketPar.name(tokenHeader).description("token").in("header").required(true).build();
     pars.add(ticketPar.build());
+
     return new Docket(DocumentationType.OAS_30)
         .enable(enabled)
         .apiInfo(apiInfo())
         .select()
-        .paths(Predicates.not((Predicate)PathSelectors.regex("/error.*")))
+        .paths(PathSelectors.regex("/error.*").negate())
         .build()
         .globalRequestParameters(pars);
   }
@@ -112,13 +105,13 @@ class SwaggerDataConfig {
   @ApiModel
   @Data
   private static class Page {
-    @Schema(name="页码 (0..N)")
+    @Schema(name = "页码 (0..N)")
     private Integer page;
 
-    @Schema(name="每页显示的数目")
+    @Schema(name = "每页显示的数目")
     private Integer size;
 
-    @Schema(name="以下列格式排序标准：property[,asc | desc]。 默认排序顺序为升序。 支持多种排序条件：如：id,asc")
+    @Schema(name = "以下列格式排序标准：property[,asc | desc]。 默认排序顺序为升序。 支持多种排序条件：如：id,asc")
     private List<String> sort;
   }
 }

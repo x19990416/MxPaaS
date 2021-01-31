@@ -15,10 +15,14 @@
  */
 package com.github.x19990416.mxpaas.admin.common.exception;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class BadRequestException extends RuntimeException{
 
     private Integer status = BAD_REQUEST.value();

@@ -19,6 +19,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
@@ -31,6 +32,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 @CacheConfig(cacheNames = "dept")
+@Service
 public class DeptServiceImpl implements DeptService {
 
   private final DeptRepository deptRepository;

@@ -31,7 +31,7 @@ import javax.persistence.EntityNotFoundException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
-@Service("userDetailsService")
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	private final UserService userService;
 	private final RoleService roleService;

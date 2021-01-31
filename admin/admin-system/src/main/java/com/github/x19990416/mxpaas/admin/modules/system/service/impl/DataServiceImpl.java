@@ -19,8 +19,8 @@ import java.util.*;
 @RequiredArgsConstructor
 @CacheConfig(cacheNames = "data")
 public class DataServiceImpl implements DataService {
-  RoleService roleService;
-  DeptService deptService;
+  private final RoleService roleService;
+  private final DeptService deptService;
 
   @Override
   @Cacheable(key = "'user:' + #p0.id")

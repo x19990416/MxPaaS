@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service("sys_permission_config")
+@Service("_sys")
 public class SysPermissionConfig {
 	public Boolean check(String ...permissions){
 		// 获取当前用户的所有权限

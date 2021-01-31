@@ -30,6 +30,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -47,6 +48,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@CacheConfig(cacheNames = "role")
 public class RoleServiceImpl implements RoleService {
   private final RoleMapper roleMapper;
   private final RoleRepository roleRepository;

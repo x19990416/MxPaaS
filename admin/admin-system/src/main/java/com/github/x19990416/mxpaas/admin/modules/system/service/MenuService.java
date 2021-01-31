@@ -2,6 +2,7 @@
 package com.github.x19990416.mxpaas.admin.modules.system.service;
 
 import com.github.x19990416.mxpaas.admin.modules.system.domain.Menu;
+import com.github.x19990416.mxpaas.admin.modules.system.domain.vo.MenuVo;
 import com.github.x19990416.mxpaas.admin.modules.system.service.dto.MenuDto;
 import com.github.x19990416.mxpaas.admin.modules.system.service.dto.MenuQueryCriteria;
 
