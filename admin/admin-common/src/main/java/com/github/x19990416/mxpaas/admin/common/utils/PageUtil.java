@@ -37,6 +37,8 @@ public class PageUtil {
     }
   }
 
+
+
   /** Page 数据处理，预防redis反序列化报错 */
   public static Map<String, Object> toPage(Page page) {
     Map<String, Object> map = new LinkedHashMap<>(2);

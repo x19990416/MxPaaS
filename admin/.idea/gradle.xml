@@ -12,9 +12,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/admin-common" />
             <option value="$PROJECT_DIR$/admin-system" />
+            <option value="$PROJECT_DIR$/admin-tools" />
+            <option value="$PROJECT_DIR$/admin-tools/tool-generator" />
+            <option value="$PROJECT_DIR$/macrossx-tools" />
+            <option value="$PROJECT_DIR$/macrossx-tools/tools-extra" />
           </set>
         </option>
-        <option name="useAutoImport" value="true" />
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>

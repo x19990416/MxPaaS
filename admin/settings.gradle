@@ -9,4 +9,4 @@
 
 rootProject.name = 'admin'
 
-include ':admin-common',':admin-system'
+include ':admin-common',':admin-system',":macrossx-tools:tools-extra",':admin-tools:tool-generator'
