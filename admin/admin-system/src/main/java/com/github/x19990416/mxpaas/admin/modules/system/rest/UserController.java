@@ -85,7 +85,7 @@ public class UserController {
 
   @Operation(method = "新增用户")
   @PostMapping
-  @PreAuthorize("@el.check('user:add')")
+  @PreAuthorize("@_sys.check('user:add')")
   public ResponseEntity<Object> create(@Validated @RequestBody User resources) {
     checkLevel(resources);
     // 默认密码 123456
@@ -96,7 +96,7 @@ public class UserController {
 
   @Operation(method = "修改用户")
   @PutMapping
-  @PreAuthorize("@el.check('user:edit')")
+  @PreAuthorize("@_sys.check('user:edit')")
   public ResponseEntity<Object> update(@Validated(User.Update.class) @RequestBody User resources)
       throws Exception {
     checkLevel(resources);

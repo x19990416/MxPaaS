@@ -87,7 +87,7 @@ public class RoleServiceImpl implements RoleService {
         .ifPresent(
             role -> {
               Role role1 = roleRepository.findByName(resources.getName());
-              if (role1 != null && role1.getId().equals(role.getId()))
+              if (role1 != null && !role1.getId().equals(role.getId()))
                 throw new EntityExistException(Role.class, "username", resources.getName());
               role.setName(resources.getName());
               role.setDescription(resources.getDescription());
