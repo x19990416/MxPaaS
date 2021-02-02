@@ -19,6 +19,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.github.x19990416.mxpaas.admin.common.base.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -29,6 +30,7 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "sys_menu")
+@EqualsAndHashCode(callSuper = false)
 public class Menu extends BaseEntity implements Serializable {
 
   @Id

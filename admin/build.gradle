@@ -7,7 +7,6 @@
 
 allprojects {
     apply plugin: 'java'
-
     ext {
         springbootStarterVersion = '2.4.2'
         springdataRedis = '2.4.3'
@@ -20,6 +19,8 @@ allprojects {
         jcenter()
     }
 
+    sourceCompatibility = 1.11
+    group = 'com.github.x19990416.mxpaas'
     dependencies {
         implementation 'org.projectlombok:lombok:1.18.8'
         implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.1.6'
